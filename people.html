@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MINE-people</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href='navbar.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+  
+  <style>
+    .featurette-divider {
+      margin: 5rem 0; 
+    }
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+    @media (min-width: 40em) {
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+
+    .departname{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-right: 70%;
+        margin-top: 50px;
+    }
+    .active {
+        font-weight: bold;
+        background-color: orange;
+    }
+    input {
+        background-color: white;
+        text-align: center;
+        margin: 5px;
+        padding: 5px;
+        font-size: 25px;
+        font-family: GmarketSansLight;
+    }
+  </style>
+  <script type="text/javascript">
+    function classchange(name){
+      $("input").removeClass("active");
+      $(name).addClass("active");
+    }
+    function fn_searchGroup(departname){
+      switch (departname) {
+        case 0 :
+        document.getElementById("board_member").style.display ='';
+        document.getElementById("Department_Chart").style.display ='none';
+        break;
+        case 1 :
+        document.getElementById("board_member").style.display ='none';
+        document.getElementById("Department_Chart").style.display ='';
+        break;
+      }
+    }
+  </script>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-default">
+        <div class="container" style='width:95%'>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">MINE</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="work.html">WORK</a></li>
+              <li><a href="news.html">NEWS</a></li>
+              <li><a href="people.html">PEOPLE</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class='container-fluid bg-1 text-center'>
+        <h2  class='title'>PEOPLE</h2>
+
+        <div class="departname">
+          <input class="active" type="button" value="Board Member" onclick="classchange(this); fn_searchGroup(0);">
+          <input type="button" value="Department Chart" onclick="classchange(this); fn_searchGroup(1);">
+        </div>
+
+        <div id="board_member" style="display: ; margin: 5%;">  
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+          </div>
+
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-5 order-md-1">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Oh yeah, it's that good. 
+                <span class="text-muted">See for yourself.</span>
+              </h2>
+              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>            
+          </div>
+
+          <hr class="featurette-divider">
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            </div>
+            <div class="col-md-5">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </div>
+          </div>
+          <hr class="featurette-divider">
+        </div>
+        
+        <div id="Department_Chart" style="display: none;">
+          <img src="Department_Chart.png" style='width:90%; margin:5%;'>
+        </div>
+      </div>
+
+    <footer class="container-fluid footer text-center">
+      <p>E-mail: wb980324@naver.com</p>
+      <p>@ site by EY</p>
+    </footer>
+
+
+
+    
+  </body>
+</html>

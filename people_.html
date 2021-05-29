@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MINE-intro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href='navbar.css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+    function classchange(name){
+      $("input").removeClass("active");
+      $(name).addClass("active");
+    }
+    function fn_searchGroup(departname){
+      switch (departname) {
+        case 0 :
+        document.getElementById("임원진").style.display ='';
+        document.getElementById("사무부").style.display ='none';
+        document.getElementById("기획부").style.display ='none';
+        break;
+        case 1 :
+        document.getElementById("임원진").style.display ='none';
+        document.getElementById("사무부").style.display ='';
+        document.getElementById("기획부").style.display ='none';
+        break;
+        case 2 :
+        document.getElementById("임원진").style.display ='none';
+        document.getElementById("사무부").style.display ='none';
+        document.getElementById("기획부").style.display ='';
+        break;
+      }
+    }
+  </script>
+<style>
+  .departname{
+    display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-right: 60%;
+  }
+</style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container" style='width:95%'>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="intro.html">MINE</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="work.html">WORK</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="people.html">PEOPLE</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+    <div class='container-fluid bg-1 text-center'>
+        <h2  class='title'>PEOPLE</h2>
+
+        <div class="departname">
+          <input class="active" type="button" value="임원진" onclick="classchange(this); fn_searchGroup(0);">
+          <input type="button" value="사무부" onclick="classchange(this); fn_searchGroup(1);">
+          <input type="button" value="기획부" onclick="classchange(this); fn_searchGroup(2);">
+        </div>
+
+        <div id="임원진" style="display: ">
+          <span>
+            <div class="wrap-img">
+              <div class="img">
+                <img src="source\people\it'sme.jpg" alt="이즈넛">
+              </div>
+            </div>
+            <p class="tit">유은영</p>
+            <p class="txt">이즈넛 18기</p>
+            <p class="comment">무슨 말을 더 써야하지..?</p>
+          </span>
+        </div>   
+    </div>
+
+    <footer class="container-fluid footer text-center">
+        <p>E-mail: wb980324@naver.com</p>
+        <p>@site by EY</p>
+    </footer>
+</body>
