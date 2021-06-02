@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'SDKukdetopokki';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDKukdetopokki.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font: 30px sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: 'SDKukdetopokki';
+}
+
+.navbar{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover{
+    color:#FFA500 !important;
+}
+
+.bg-1{
+    background-color: #ffffff; 
+    color: #555555;
+}
+.container-fluid{
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.title{
+  font-size: 70px;
+  text-align: center;
+  font-family: 'SDKukdetopokki';
+  font-weight: bold;
+  display: block;
+}
+
+.text h2::after {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    height: 1px;
+    width: 80px;
+    margin-left: -42px;
+    background-color: rgb(0, 0, 0);
+    content: "";
+}
+
+
+.footer {
+    border-top:solid black 2px;
+    color: black;
+    font-family: 'MapoFlowerIsland';
+}
+.footer p{
+    font-size: 20px;
+}
+
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
